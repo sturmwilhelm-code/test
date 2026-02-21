@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pokémon Roulette</title>
 </head>
-
 <body>
 
     <div id="setup-menu">
-    <h2 id="setup-title">Wähle deine Region / Choose your Region</h2>
-    <div class="gen-buttons">
-        <button onclick="startGame(1, 151)">Gen 1 (Kanto)</button>
-        <button onclick="startGame(152, 251)">Gen 2 (Johto)</button>
-        <button onclick="startGame(252, 386)">Gen 3 (Hoenn)</button>
-        <button onclick="startGame(387, 493)">Gen 4 (Sinnoh)</button>
-    </div>
-</div>
-
-<div id="game-container" style="display: none;">
+        <h2 id="setup-title">Wähle deine Region / Choose your Region</h2>
+        <div class="gen-buttons">
+            <button onclick="startGame(1, 151)">Gen 1 (Kanto)</button>
+            <button onclick="startGame(152, 251)">Gen 2 (Johto)</button>
+            <button onclick="startGame(252, 386)">Gen 3 (Hoenn)</button>
+            <button onclick="startGame(387, 493)">Gen 4 (Sinnoh)</button>
+        </div>
     </div>
 
-    <div id="app-container">
+    <div id="app-container" style="display: none;">
+        
         <div class="lang-switch">
             <button id="btn-en" onclick="changeLanguage('en')">EN</button>
             <button id="btn-de" onclick="changeLanguage('de')">DE</button>
@@ -35,8 +31,8 @@
 
         <div id="player-stats">
             <div class="stat-item">💰 <span id="stat-money">500</span></div>
-            <div class="stat-item">🔴 <span id="stat-balls">1</span></div>
-            <div class="stat-item">🧪 <span id="stat-potions">2</span></div>
+            <div class="stat-item">🔴 <span id="stat-balls">5</span></div>
+            <div class="stat-item">🧪 <span id="stat-potions">3</span></div>
         </div>
 
         <div class="display">
@@ -44,17 +40,15 @@
             <h2 id="pokemon-name">???</h2>
         </div>
 
-        <div id="app-container">
-                <div id="team-container">
-                <h3 id="team-title">Mein Team</h3> <div class="team-slots"></div>
-                <div class="team-slots">
-                    <div class="slot" id="slot-0"></div>
-                    <div class="slot" id="slot-1"></div>
-                    <div class="slot" id="slot-2"></div>
-                    <div class="slot" id="slot-3"></div>
-                    <div class="slot" id="slot-4"></div>
-                    <div class="slot" id="slot-5"></div>
-                </div>
+        <div id="team-container">
+            <h3 id="team-label">Mein Team</h3> 
+            <div class="team-slots">
+                <div class="slot" id="slot-0"></div>
+                <div class="slot" id="slot-1"></div>
+                <div class="slot" id="slot-2"></div>
+                <div class="slot" id="slot-3"></div>
+                <div class="slot" id="slot-4"></div>
+                <div class="slot" id="slot-5"></div>
             </div>
         </div>
 
