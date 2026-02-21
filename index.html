@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokémon Roulette</title>
+</head>
+
+<body>
+
+    <div id="setup-menu">
+    <h2 id="setup-title">Wähle deine Region / Choose your Region</h2>
+    <div class="gen-buttons">
+        <button onclick="startGame(1, 151)">Gen 1 (Kanto)</button>
+        <button onclick="startGame(152, 251)">Gen 2 (Johto)</button>
+        <button onclick="startGame(252, 386)">Gen 3 (Hoenn)</button>
+        <button onclick="startGame(387, 493)">Gen 4 (Sinnoh)</button>
+    </div>
+</div>
+
+<div id="game-container" style="display: none;">
+    </div>
+
+    <div id="app-container">
+        <div class="lang-switch">
+            <button id="btn-en" onclick="changeLanguage('en')">EN</button>
+            <button id="btn-de" onclick="changeLanguage('de')">DE</button>
+            <button id="btn-es" onclick="changeLanguage('es')">ES</button>
+            <button id="btn-fr" onclick="changeLanguage('fr')">FR</button>
+        </div>
+
+        <h1 id="main-title">Pokémon Roulette</h1>
+
+        <div id="player-stats">
+            <div class="stat-item">💰 <span id="stat-money">500</span></div>
+            <div class="stat-item">🔴 <span id="stat-balls">1</span></div>
+            <div class="stat-item">🧪 <span id="stat-potions">2</span></div>
+        </div>
+
+        <div class="display">
+            <img id="pokemon-sprite" src="" alt="Pokemon Bild">
+            <h2 id="pokemon-name">???</h2>
+        </div>
+
+        <div id="app-container">
+                <div id="team-container">
+                <h3 id="team-title">Mein Team</h3> <div class="team-slots"></div>
+                <div class="team-slots">
+                    <div class="slot" id="slot-0"></div>
+                    <div class="slot" id="slot-1"></div>
+                    <div class="slot" id="slot-2"></div>
+                    <div class="slot" id="slot-3"></div>
+                    <div class="slot" id="slot-4"></div>
+                    <div class="slot" id="slot-5"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="spin-button" onclick="spin()">Jetzt drehen!</button>
+            <button id="catch-button" onclick="attemptCatch()" style="display: none;">Fangen!</button>
+        </div>
+
+        <div id="market-container">
+            <button class="buy-btn" onclick="buyItem('pokeball')">Pokéball kaufen (200$)</button>
+            <button class="buy-btn" onclick="buyItem('potion')">Trank kaufen (300$)</button>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="gameState.js"></script>
+    <script src="ui.js"></script>
+    <script src="market.js"></script>
+    <script src="capture.js"></script>
+    <script src="spin.js"></script>
+    
+</body>
+</html>
