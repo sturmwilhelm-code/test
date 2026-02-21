@@ -24,10 +24,10 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap; /* Falls der Bildschirm schmal ist */
+    flex-wrap: wrap;
 }
 
-/* Die runden Slots für die Pokémon */
+/* Die runden Slots */
 .slot {
     width: 60px;
     height: 60px;
@@ -45,7 +45,7 @@ body {
     height: 50px;
 }
 
-/* Pokémon Bild im Hauptdisplay */
+/* Pokémon Bild */
 #pokemon-sprite {
     height: 120px;
     margin: 20px 0;
